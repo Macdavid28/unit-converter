@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form class="container">
+    <h1>Weight Converter</h1>
+
+    <input type="number" id="weight" placeholder="Type weight in here">
+    <label for="kg-to-lbs">
+        <input type="radio" name="unit" value="lbs" id="unit" checked>
+        kg to lbs</label>
+    <label for="lbs-to-kg">
+        <input type="radio" name="unit" value="kg" id="unit">
+        lbs to kg</label>
+        <label for="g-to-kg">
+            <input type="radio" name="unit" value="g" id="unit">
+            kg to g
+        </label>
+        <label for="g-to-kg">
+            <input type="radio" name="unit" value="gram" id="unit">
+            g to kg
+        </label>
+    <button type="submit" id="result">Convert</button>
+    </form>
+    <h3 class="result"></h3>
+</body>
+</html>
