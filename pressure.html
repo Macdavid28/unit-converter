@@ -6,12 +6,12 @@
     <title>Volume</title>
     <script src="js/jquery-3.7.0.min.js"></script>
     <script src="js/script.js"></script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
       <nav class="navbar">
-        <h1 class="nav-branding">Unit <span>Converter</span></h1>
+        <h1 class="logo">Unit <span>Converter</span></h1>
         <ul class="nav-menu">
           <li><a href="unit.html" class="nav-link">Volume</a></li>
           <li><a href="length.html" class="nav-link">Length</a></li>
@@ -26,17 +26,22 @@
           <li><a href="area.html" class="nav-link">Area</a></li>
           <li><a href="angle.html" class="nav-link">Angle</a></li>
         </ul>
-        <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+        <div class="menu-icon">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
         </div>
       </nav>
     </header>
     <div class="pressure-units unit">
       <div class="input">
         <h3>Select number value</h3>
-        <input type="number" name="value" id="value" placeholder="Input number" />
+        <input
+          type="number"
+          name="value"
+          id="value"
+          placeholder="Input number"
+        />
         <h3>Select volume unit</h3>
 
         <select name="" id="">
@@ -47,12 +52,16 @@
           <option value="pascal">Pascals</option>
           <option value="ppsi">Pounds per square inch</option>
         </select>
-
       </div>
 
       <div class="output">
         <h3>Select number value</h3>
-        <input type="number" name="value" id="value" placeholder="Input number" />
+        <input
+          type="number"
+          name="value"
+          id="value"
+          placeholder="Input number"
+        />
         <h3>Select volume unit</h3>
 
         <select name="" id="">
@@ -64,7 +73,6 @@
           <option value="ppsi">Pounds per square inch</option>
         </select>
       </div>
-
     </div>
   </body>
 </html>
