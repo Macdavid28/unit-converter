@@ -7,14 +7,17 @@
     <script src="js/jquery-3.7.0.min.js"></script>
     <script src="js/weight.js"></script>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" href="img/pexels-ekaterina-bolovtsova-6077519.jpg" />
+    <link rel="stylesheet" href="navbar.css" />
   </head>
   <body>
     <header>
       <nav class="navbar">
-        <h1 class="logo">Unit <span>Converter</span></h1>
+        <h1 class="logo">
+          <div>Unit</div>
+          <span>Converter</span>
+        </h1>
         <ul class="nav-menu">
-          <li><a href="unit.html" class="nav-link">Volume</a></li>
+          <li><a href="volume.html" class="nav-link">Volume</a></li>
           <li><a href="length.html" class="nav-link">Length</a></li>
           <li><a href="weight.html" class="nav-link">Weight</a></li>
           <li><a href="temp.html" class="nav-link">Temperature</a></li>
@@ -22,7 +25,7 @@
           <li><a href="speed.html" class="nav-link">Speed</a></li>
           <li><a href="power.html" class="nav-link">Power</a></li>
           <li><a href="pressure.html" class="nav-link">Pressure</a></li>
-          <li><a href="time.html">Time</a></li>
+          <li><a href="time.html" class="nav-link">Time</a></li>
           <!-- <li><a href="data.html">Data</a></li> -->
           <li><a href="area.html" class="nav-link">Area</a></li>
           <li><a href="angle.html" class="nav-link">Angle</a></li>
@@ -42,9 +45,10 @@
           name="value"
           id="inputValue"
           placeholder="Input number"
+          class="number"
         />
         <h3>Select volume unit</h3>
-        <select name="units" id="selectUnit">
+        <select name="units" id="units">
           <option value="carat">Carats</option>
           <option value="milligram">Milligrams</option>
           <option value="centigram">Centigrams</option>
@@ -68,6 +72,7 @@
           name="value"
           id="outputValue"
           placeholder="Output number"
+          class="number"
         />
         <h3>Select volume unit</h3>
         <select name="weight-units" id="chooseUnit">
