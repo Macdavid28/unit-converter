@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  outline: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.unit {
+  display: flex;
+  height: 200px;
+  gap: 200px;
+  padding-top: 100px;
+  justify-content: center;
+}
+
+.input,
+.output {
+  padding: 80px 80px 300px 100px;
+  border: 2px solid royalblue;
+  border-radius: 12px;
+}
+.input h3 {
+  font-family: "Quicksand";
+  color: royalblue;
+  font-size: 25px;
+  font-weight: 400;
+  padding-bottom: 8px;
+}
+.output h3 {
+  font-family: "Quicksand";
+  color: royalblue;
+  font-size: 25px;
+  font-weight: 400;
+  padding-bottom: 8px;
+}
+.number {
+  width: 200px;
+  height: 60px;
+  border: 1px solid black;
+  border-radius: 12px;
+}
+select {
+  width: 200px;
+  height: 60px;
+  border: 1px solid black;
+  border-radius: 12px;
+  font-family: "Quicksand";
+}
+::placeholder {
+  color: black;
+  padding-left: 5px;
+  font-family: "Quicksand";
+}
+option {
+  color: royalblue;
+}
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: var(--black);
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+.change div:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.change div:nth-child(2) {
+  opacity: 0;
+}
+
+.change div:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+.toggle-menu {
+  position: absolute;
+  width: 30px;
+  height: 100%;
+  z-index: 3;
+  cursor: pointer;
+  opacity: 0;
+}
+.hamburger,
+.toggle-menu {
+  display: none;
+}
+.navbar input:checked ~ .hamburger {
+  background: transparent;
+}
+.navbar input:checked ~ .hamburger:before {
+  top: 0;
+  transform: rotate(-45deg);
+  width: 30px;
+}
+.navbar input:checked ~ .hamburger:after {
+  top: 0;
+  transform: rotate(45deg);
+  width: 30px;
+}
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+}

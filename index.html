@@ -13,7 +13,9 @@
     <form class="container">
     <h1>Weight Converter</h1>
 
-    <input type="number" id="weight" placeholder="Type weight in here">
+    <input type="number" id="weight" placeholder="Initial Weight/Mass">
+    <input type="text" id="converted" placeholder="Converted Weight/Mass">
+   <div class="buttons">
     <label for="kg-to-lbs">
         <input type="radio" name="unit" value="lbs" id="unit" checked>
         kg to lbs</label>
@@ -28,6 +30,15 @@
             <input type="radio" name="unit" value="gram" id="unit">
             g to kg
         </label>
+        <label for="lbs-to-g">
+            <input type="radio" name="unit" value="lbs-to-g" id="unit">
+            lbs to g
+        </label>
+        <label for="g-to-lbs">
+            <input type="radio" name="unit" value="g-to-lbs" id="unit">
+            g to lbs
+        </label>
+   </div>
     <button type="submit" id="result">Convert</button>
     </form>
     <h3 class="result"></h3>
