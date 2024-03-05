@@ -2,13 +2,12 @@
   list-style-type: none;
 }
 .navbar {
-  /* background-color: royalblue; */
   display: flex;
   height: 60px;
   justify-content: center;
   width: 100%;
   align-items: center;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid white;
 }
 
 .nav-container {
@@ -21,7 +20,7 @@
 }
 
 .nav-menu .nav-link {
-  color: black;
+  color: white;
   text-decoration: none;
   font-family: "Quicksand";
   font-size: 20px;
@@ -38,7 +37,7 @@
   display: block;
   width: 25px;
   height: 3px;
-  background-color: black;
+  background-color: white;
   margin: 5px;
   transition: all 0.3s ease;
   align-items: center;
@@ -52,7 +51,8 @@
     left: 0;
     width: 50%;
     height: 58vh;
-    background-color: royalblue;
+    background-color: #221c57;
+    box-shadow: 1px 1px 20px 1px #000;
   }
   .nav-menu.show {
     display: flex;
@@ -91,9 +91,6 @@
     transition: all 0.3s ease;
     height: 55px;
     align-items: center;
-  }
-  .nav-link:hover {
-    color: black;
   }
 }
 
