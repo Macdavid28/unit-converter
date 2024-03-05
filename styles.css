@@ -7,82 +7,56 @@
   scroll-behavior: smooth;
 }
 body {
-  margin: 0;
-  padding: 0;
+  font-family: "Quicksand", sans-serif;
+  background-color: #221c57;
 }
 .unit {
-  display: flex;
-  height: 200px;
-  gap: 200px;
-  padding-top: 100px;
-  justify-content: center;
-}
-
-.input,
-.output {
-  padding: 80px 80px 300px 100px;
-  border: 2px solid royalblue;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25%;
+  height: 70%;
+  padding: 20px;
+  border: 1px solid white;
   border-radius: 12px;
 }
-.input h3 {
-  font-family: "Quicksand";
-  color: royalblue;
-  font-size: 25px;
-  font-weight: 400;
-  padding-bottom: 8px;
+.title {
+  color: #fff;
+  padding: 20px;
 }
-.output h3 {
-  font-family: "Quicksand";
-  color: royalblue;
-  font-size: 25px;
-  font-weight: 400;
-  padding-bottom: 8px;
+p {
+  color: #fff;
+  font-size: 20px;
+  padding: 5px;
 }
-.number {
-  width: 200px;
-  height: 60px;
-  border: 1px solid black;
-  border-radius: 12px;
+input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid white;
+  background-color: transparent;
+  border-radius: 5px;
+  color: white;
+  padding: 10px;
+  font-size: 20px;
 }
 select {
-  width: 200px;
-  height: 60px;
-  border: 1px solid black;
-  border-radius: 12px;
-  font-family: "Quicksand";
-}
-::placeholder {
-  color: black;
-  padding-left: 5px;
-  font-family: "Quicksand";
+  width: 100%;
+  height: 40px;
+  border: 1px solid white;
+  background-color: transparent;
+  border-radius: 5px;
+  color: white;
+  font-size: 18px;
 }
 option {
-  color: royalblue;
+  color: black;
 }
-
-@media (max-width: 1024px) {
-  .unit {
-    display: grid;
-    gap: 30px;
-    padding-top: 180px;
-  }
-  .input,
-  .output {
-    padding: 50px 50px 50px 80px;
-    /* border: 5px solid black; */
-  }
-}
-@media (max-width: 768px) {
-  .unit {
-    padding-top: 100px;
-  }
-}
-@media (max-width: 468px) {
-  .unit {
-    padding-top: 18px;
-  }
-  .input,
-  .output {
-    padding: 30px 40px 30px 60px;
-  }
+.up-down {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  line-height: 1;
+  padding-top: 30px;
+  color: #fff;
 }
