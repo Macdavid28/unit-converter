@@ -6,6 +6,7 @@
     <title>Document</title>
     <script src="js/jquery-3.7.0.min.js"></script>
     <script src="js/weight.js"></script>
+    <script src="js/navbar.js"></script>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="navbar.css" />
   </head>
@@ -15,7 +16,11 @@
         <ul class="nav-menu">
           <li><a href="volume.html" class="nav-link">Volume</a></li>
           <li><a href="length.html" class="nav-link">Length</a></li>
-          <li><a href="weight.html" class="nav-link">Weight</a></li>
+          <li>
+            <a href="weight.html" id="weight-link" class="nav-link active"
+              >Weight</a
+            >
+          </li>
           <li><a href="temp.html" class="nav-link">Temperature</a></li>
           <li><a href="energy.html" class="nav-link">Energy</a></li>
           <li><a href="speed.html" class="nav-link">Speed</a></li>
@@ -39,7 +44,7 @@
         <input
           type="number"
           name="value"
-          id="inputValue"
+          id="inputWeight"
           value="1"
           class="number"
         />
@@ -81,8 +86,9 @@
           <option value="short-ton">Short tons(US)</option>
           <option value="long-ton">Long tons(UK)</option>
         </select>
+        <h1 id="output" class="output"></h1>
       </div>
-      <button class="convert">Convert</button>
+      <button class="convert" onclick="weightConversion()">Convert</button>
     </div>
   </body>
 </html>

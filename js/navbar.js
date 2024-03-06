@@ -8,4 +8,5 @@ $(document).ready(function () {
       $(".nav-menu").removeClass("show");
     }
   });
+  $("#weight-link").addClass("active");
 });

@@ -1,59 +1,39 @@
-$(document).ready(() => {
-  $("#inputValue,#outputValue,#selectUnit,chooseUnit").on(
-    "input change",
-    () => {
-      convertWeight();
-    }
-  );
+function weightConversion() {
+  const inputWeight = document.getElementById("inputWeight").value;
+  const fromUnit = document.getElementById("selectUnit").value;
+  const toUnit = document.getElementById("chooseUnit").value;
+  let convertedWeight = 0;
 
-  const convertWeight = () => {
-    const inputWeight = parseFloat($("#inputValue").val());
-    const selectedUnit = $("#selectUnit").val();
-    const chosenUnit = $("#chooseUnit").val();
-    let convertedWeight = 0;
-    //  If Units are the same
-    if (
-      (selectedUnit === "carat" && chosenUnit === "carat") ||
-      (selectedUnit === "milligram" && chosenUnit === "milligram") ||
-      (selectedUnit === "centigram" && chosenUnit === "centigram") ||
-      (selectedUnit === "decigram" && chosenUnit === "decigram") ||
-      (selectedUnit === "gram" && chosenUnit === "gram") ||
-      (selectedUnit === "dekagram" && chosenUnit === "dekagram") ||
-      (selectedUnit === "hectogram" && chosenUnit === "hectogram") ||
-      (selectedUnit === "metric-tonne" && chosenUnit === "metric-tonne") ||
-      (selectedUnit === "ounce" && chosenUnit === "ounce") ||
-      (selectedUnit === "pound" && chosenUnit === "pound") ||
-      (selectedUnit === "stone" && chosenUnit === "stone") ||
-      (selectedUnit === "short-ton" && chosenUnit === "short-ton") ||
-      (selectedUnit === "long-ton" && chosenUnit === "long-ton")
-    ) {
-      convertedWeight = inputWeight;
-    }
-    // Convert carat to milligram (1 carat = 200 mg)
-    else if (selectedUnit === "carat" && chosenUnit === "milligram") {
-      convertedWeight = inputWeight * 200;
-    }
-    // Convert carat to centigram (1 carat = 20 cg)
-    else if (selectedUnit === "carat" && chosenUnit === "centigram") {
-      convertedWeight = inputWeight * 20;
-    }
-    // Convert carat to decigram  (1 carat = 2 dg)
-    else if (selectedUnit === "carat" && chosenUnit === "decigram") {
-      convertedWeight = inputWeight * 2;
-    }
-    // Convert carat to gram (1 carat = 0.2 g)
-    else if (selectedUnit === "carat" && chosenUnit === "gram") {
-      convertedWeight = inputWeight * 0.2;
-    }
-    // Convert carat to dekagram (1 carat = 0.02 dg)
-    else if (selectedUnit === "carat" && chosenUnit === "dekagram") {
-      convertedWeight = inputWeight * 0.02;
-    }
-    // Convert carat to  hectogram
-    else if (selectedUnit === " carat" && chosenUnit === "hectogram") {
-      convertedWeight = inputWeight * 0.002;
-    }
-    $("#outputValue").val(convertedWeight);
-  };
-  convertWeight();
-});
+  if (fromUnit === toUnit) {
+    convertedWeight = inputWeight;
+  } else if (fromUnit === "carat" && toUnit === "milligram") {
+    convertedWeight = inputWeight * 200;
+  } else if (fromUnit === "carat" && toUnit === "centigram") {
+    convertedWeight = inputWeight * 20;
+  } else if (fromUnit === "carat" && toUnit === "decigram") {
+    convertedWeight = inputWeight * 2;
+  } else if (fromUnit === "carat" && toUnit === "gram") {
+    convertedWeight = inputWeight * 0.2;
+  } else if (fromUnit === "carat" && toUnit === "dekagram") {
+    convertedWeight = inputWeight * 0.02;
+  } else if (fromUnit === "carat" && toUnit === "hectogram") {
+    convertedWeight = inputWeight * 0.002;
+  } else if (fromUnit === "carat" && toUnit === "kilogram") {
+    convertedWeight = inputWeight * 0.0002;
+  } else if (fromUnit === "carat" && toUnit === "metric-tonne") {
+    convertedWeight = inputWeight * 2e-7;
+  } else if (fromUnit === "carat" && toUnit === "ounce") {
+    convertedWeight = inputWeight * 0.007055;
+  } else if (fromUnit === "carat" && toUnit === "pound") {
+    convertedWeight = inputWeight * 0.000441;
+  } else if (fromUnit === "carat" && toUnit === "stone") {
+    convertedWeight = inputWeight * 3.1495e-5;
+  } else if (fromUnit === "carat" && toUnit === "short-ton") {
+    convertedWeight = inputWeight * 2.2046e-7;
+  } else if (fromUnit === "carat" && toUnit === "long-ton") {
+    convertedWeight = inputWeight * 1.9684e-7;
+  }
+  document.getElementById(
+    "output"
+  ).innerHTML = `${inputWeight} ${fromUnit} = ${convertedWeight} ${toUnit} `;
+}
